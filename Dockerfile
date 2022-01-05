@@ -8,4 +8,5 @@ RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -
     && mv ./kubectl /usr/local/bin/kubectl \
     && curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 \
     && chmod +x get_helm.sh && ./get_helm.sh
-RUN pip install yq
+
+RUN apk add yq --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
