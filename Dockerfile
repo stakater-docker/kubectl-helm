@@ -9,4 +9,4 @@ RUN curl -LO "https://storage.googleapis.com/kubernetes-release/release/$(curl -
     && curl -fsSL -o get_helm.sh https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 \
     && chmod +x get_helm.sh && ./get_helm.sh
 RUN apk add yq --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
-RUN apk add py3-jinja2 --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
+RUN pip3 install j2cli
